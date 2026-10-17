@@ -1,3 +1,7 @@
+# output-Task 1: Create a Simple Login Form UI 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1f6cb691-183d-4fbe-a07e-dcbb6f29ad4e" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c90a5fbc-26db-420f-a6f0-05e561e06284" />
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
