@@ -1,3 +1,9 @@
+#output- ✔ Task 1: Create a Simple Counter App (Increment/Decrement) and ✔ Task 2: Build a Form That Displays Input Data Dynamically
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b0378b18-ed76-4b97-ba0c-58beb74c1c5a" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/769758ae-4dbe-4212-b512-b156fe6e82bb" />
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
