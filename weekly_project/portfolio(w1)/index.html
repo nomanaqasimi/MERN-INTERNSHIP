@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomana Qasimi-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <ul class="nav-list">
+                <li class = "nav-iteme"><a href="#home">Home</a></li>
+                <li class="nav-iteme"><a href="#about">About</a></li>
+                <li class="nav-iteme"><a href="#skills">Skills</a></li>
+                <li class="nav-iteme"><a href="#experience">Experience</a></li>
+                <li class="nav-iteme"><a href="#projects">Projects</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-circle-half-stroke" id="theme-icon"></i>
+            </button>
+        </nav>
+        <div class="hero-sec">
+            <div class="hero-content">
+                <h1>Hey...! I am Nomana Qasimi</h1>
+                <p id="key-line">I am a Front-End Developer and a UI/UX Designer</p>
+            </div>
+            <img id="avatar" src="avatar.png" alt="Nomana Qasimi Avatar" />
+          
+        </div>
+    </header>
+    <main>
+        <div id ="about">
+            <img id="my-photo" src="my-photo.png" alt="Nomana Qasimi Photo" />
+            <p>I am a Front-End Developer and a UI/UX Designer from M.P. India . I have been working in the field of web development for the past 1 years. I am passionate about learning and improving my skills.
+            I am passionate learner and continously improving my backend technologies skillset. I have strong command on C++/java and OOps. I am always looking for new challenges and opportunities to grow my skills and knowledge. I am excited to contribute to the development of the web and make a positive impact on the world.</p>
+        </div>
+          <p id="skills-title">Skills</p>
+        <div class ="skills">
+          
+            <section class="st-row">
+                <img class = "skill-img"src ="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/>                
+        
+                <img class = "skill-img" src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/>
+                <img class = "skill-img" src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/>
+                
+               <img class = "skill-img" src ="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+
+            </section>
+            <section class="nd-row">
+                <img class = "skill-img" src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/>
+    
+                <img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Css"/>
+
+                <img class="skill-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="OOPs"/>
+    
+            </section>
+        </div>
+         <h2 class = "projects">Projects</h2>
+
+        <div class ="Projects">
+           
+            <div class="project-container">
+                <section class="javaquize">
+                <img class="project-img" src="images/projects/javaquize.png" alt="javaquiz" />
+                <h3>JavaQuiz</h3>
+                <a href="https://github.com/nomanaqasimi/QuizApp" target="_blank">View on GitHub</a>
+                <p>A modern, interactive desktop trivia quiz application built using Java and Swing UI. This application presents multiple-choice technical questions, tracks the user's score in real-time, and provides immediate feedback upon completion.
+                </p>
+                </section>
+                <section class="text-search-engine">
+                <img class="project-img" src="images/projects/text-search-engine.png" alt="Text-search-engine" />
+                <h3>Text-search-engine</h3>
+                <p>Built a console-based text search engine using C++ STL. Implemented word frequency analysis, sorting with lambda functions, and file-based text processing.</p>
+                <a href="https://github.com/nomanaqasimi/Text-search-engine-cpp" target="_blank">View on GitHub</a>
+                </section>
+                <section class="explore-india">
+                <img class="project-img" src="images/projects/ExploreIndia.png" alt="ExploreIndia" />
+                <h3>ExploreIndia</h3>
+                <p>**Explore India 🇮🇳** is a responsive travel and tourism website designed to showcase the beauty, culture, heritage, and diverse destinations of India. The project provides an engaging and user-friendly interface where visitors can explore different places, discover interesting attractions, and get a glimpse of India's rich cultural diversity. It focuses on clean design, smooth navigation, and an appealing visual experience while demonstrating front-end web development skills using HTML and CSS.
+                </p>
+                 <a href="https://nomanaqasimi.github.io/explore_india/" target="_blank">View on GitHub</a>
+                </section>
+            </div>
+            <div class="Contact">
+                <h2 class="contact">Contact</h2>
+                <p>Feel free to contact me at <a href="mailto:nomanaqasimi@gmail.com">nomanaqasimi@gmail.com</a></p>
+                <p>You can also find me on <a href="https://www.linkedin.com/in/nomanaqasimi-a4b4661b0/">LinkedIn</a></p>
+                <p>and <a href="https://github.com/nomanaqasimi">GitHub</a></p>
+      
+        <div class ="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button id ="subbtn" type="submit" class="btn">Send Message</button>
+        </div>
+        </div>
+    </main>
+    <footer class="footer">
+  <div class="social-buttons">
+    <a href="https://facebook.com" class="social-btn facebook" target="_blank" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com" class="social-btn twitter" target="_blank" aria-label="Twitter">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+    <a href="https://instagram.com" class="social-btn instagram" target="_blank" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://linkedin.com" class="social-btn linkedin" target="_blank" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+}
+body {
+    background-color: #244047;
+    font-family: poppins, sans-serif;
+}
+header {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.usercard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(244, 246, 248, 0.219);
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 500px;
+    border-radius: 10px;
+    gap: 1.5rem;
+}
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.3rem;
+    text-align: left;
+    color: white;
+}
+.userimg {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: none;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem auto;
+}
+button {
+    background-color: rgb(36, 179, 91);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.parent {
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+.parent.show-cards {
+    opacity: 1;
+    visibility: visible;
+}

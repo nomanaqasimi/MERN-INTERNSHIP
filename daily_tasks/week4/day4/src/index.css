@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4B7BEC;
+  --color-secondary: #A55EEA;
+  --color-accent: #20BF6B;
+  --color-background: #F4F6F7;
+}
+
+@layer components {
+  .btn-custom {
+    @apply bg-primary text-white px-4 py-2 rounded-lg hover:opacity-90 active:scale-95 transition-all duration-300;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style your page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+        <h1>Welcome</h1>
+        <div class="controler">
+        <section id="font-controls">
+        <label id = "fontLabel" for="fontSelect">Choose Font:</label>
+        <select id="fontSelect">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+            <option value="'Courier New', monospace">Courier New</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="poppins, sans-serif">Poppins</option>
+          </select>
+            <button id="font-increase">A+</button>
+            <button id="font-decrease">A-</button>
+            <button id="boldBtn">Bold</button>
+            <button id="italicBtn">Italic</button>
+            <button id="underlineBtn">Underline</button>
+        </section>
+        <section id="color-controls">
+          <button id="redbtn">Red</button>
+          <button id="bluebtn">Blue</button>
+          <button id="greenbtn">Green</button>
+        </section>
+        <section id="changes">
+            <!-- <button id="applybtn">Apply Changes</button> -->
+            <button id="resetBtn">Reset</button>
+        </section>
+        </div>
+    </header>
+    <main>
+        <section class="main-content">
+        <div class="heading">
+            <h3>The Magic of Learning Web Development</h3>
+        </div>
+        <div class="content">
+            <p id="blog-text">Coding is like giving life to your ideas on a digital canvas. With just a few lines of code, you can build interactive tools, design beautiful pages, and solve real-world problems. Every small step you practice today makes you a better creator tomorrow. Keep experimenting and have fun building!</p>
+        </div>
+    </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
