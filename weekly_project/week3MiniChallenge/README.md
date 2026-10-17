@@ -1,3 +1,7 @@
+# output-Mini Project: React Personal Blog UI
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e88d4294-3c5c-40eb-bb1c-5fc3d26cf4be" />
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
