@@ -1,3 +1,9 @@
+#output - Fetch Public API Data Using useEffect and Task 2: Display Posts Dynamically on Render, Bonus: Add Loading Animation & Error States
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d3d4f40a-e6ba-4e75-b30f-605bc6ab6350" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7204d64b-04a7-49a4-a7e3-eb3e38a08aed" />
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
