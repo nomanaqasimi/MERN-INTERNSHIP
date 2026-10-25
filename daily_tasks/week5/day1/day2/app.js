@@ -1,0 +1,6 @@
+console.log('Hello World!')
+const maths = require('./maths.js')
+console.log(maths.add(10,20))
+console.log(maths.multiply(10,20))
+console.log(maths.divide(10,0))
+console.log(maths.divide(10,20))
