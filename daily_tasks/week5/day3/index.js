@@ -15,6 +15,16 @@ app.post("/contact", (req, res) => {
 res.send("Contact form submitted!");
 });
 
-app.listen(5000, () => {
-console.log("Server running on port 5000");
+app.get("/api/user", (req, res) => {
+    res.json({
+        id:1,
+        name:"ananya",
+        role:"intern",
+        skills:["node.js","express.js","git"]
+    })
+});
+
+
+app.listen(5100, () => {
+console.log("Server running on port 5100");
 });
