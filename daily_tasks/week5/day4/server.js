@@ -3,6 +3,9 @@ const app=express();
 
 app.use(express.json());
 
+const logger = require("./middleware/logger");
+app.use(logger)
+
 const userRoutes=require("./routes/userRoutes");
 app.use("/",userRoutes);
 
