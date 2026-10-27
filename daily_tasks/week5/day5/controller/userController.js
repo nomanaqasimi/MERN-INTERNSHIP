@@ -1,20 +1,20 @@
 let users=[
-    {id: 1,
+    {id: "1",
         name:"roy",
         age:23
     },
     {
-        id:2,
+        id:"2",
         name:"aarav",
         age:25
     },
     {
-        id:3,
+        id:"3",
         name:"shanaya",
         age:21
     },
     {
-        id :4,
+        id :"4",
         name:"shivangi",
         age:24
     }
@@ -29,4 +29,13 @@ exports.getUserById=(req,res)=>{
     return res.status(401).json("user not found");
    }
     res.status(200).json(user)
+}
+exports.getParameters=(req,res)=>{
+    const {id ,section}=req.params;
+    res.status(200).json(
+        {
+            id: id,
+            section: section
+        }
+    )
 }

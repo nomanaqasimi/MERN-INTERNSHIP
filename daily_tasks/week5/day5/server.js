@@ -10,6 +10,10 @@ app.use(logger)
 const routes=require("./routes/UserRoutes.js")
 
 app.use("/",routes)
+
+const errorHandling=require("./middleware/errorHandling.js")
+app.use(errorHandling);
+
 const port = process.env.PORT || 3000 
 app.listen(port,()=>{
 console.log(`server is running on port: ${port}`)
