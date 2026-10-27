@@ -1,0 +1,26 @@
+{
+
+  "scripts": {
+
+    "start": "server.js",
+
+    "dev": "nodemon server.js"
+
+  },
+
+  "dependencies": {
+
+    "dotenv": "^18.0.9",
+
+    "express": "^5.3.0"
+
+  },
+
+  "devDependencies": {
+
+    "nodemon": "^3.1.14"
+
+  }
+
+}
+
