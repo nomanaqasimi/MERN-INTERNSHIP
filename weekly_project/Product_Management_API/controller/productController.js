@@ -20,6 +20,9 @@ exports.addProduct=(req,res)=>{
                     name : req.body.name,
                     price :Number(req.body.price)
     }
+    if(req.body.price<0){
+        return res.status(400).json("price must be positive");
+    }
     products.push(newProduct);
     res.status(201).json({
         message:"product created!",
