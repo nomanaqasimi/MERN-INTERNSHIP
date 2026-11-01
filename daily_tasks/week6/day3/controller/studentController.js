@@ -49,6 +49,7 @@ exports.updateStudent = async (req, res) => {
     const updateData = req.body;
     try{
         const updatedStudent = await Student.findByIdAndUpdate(id, updateData, { new: true });
+        res.status(200).json(updatedStudent);
         if(!updatedStudent){
             return res.status(404).json("no such student found");
         }     
