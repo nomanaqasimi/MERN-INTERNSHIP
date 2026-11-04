@@ -6,7 +6,10 @@ exports.ParentRoute = (req, res) => {
 
 exports.getAllUsers = async (req, res, next) => {
   try {
-    const allUsers = await users.find();
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+    const allUsers = await users.find().skip(skip).limit(limit);
     res.status(200).json(allUsers);
   } catch (error) {
     next(error);
