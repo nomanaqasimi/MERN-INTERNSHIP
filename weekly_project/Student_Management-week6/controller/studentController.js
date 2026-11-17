@@ -69,8 +69,17 @@ exports.Studentupdate=async (req,res,next)=>{
         next(err);
     }
 }
-exports.deleteById=(req,res,next)=>{
-    
+exports.deleteById=async (req,res,next)=>{
+    try{
+        const id = req.params.id;
+        const deletedStudent = await Students.findByIdAndDelete(id);
+        if(!deletedStudent){
+            return res.status(404).json("no such student found");
+        }
+        res.status(400).json("student deleted");
+    }catch(err){
+        next();
+    }
 }
 exports.deleteMany = async (req, res, next) => {
     try {

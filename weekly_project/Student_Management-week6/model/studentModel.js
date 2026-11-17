@@ -19,7 +19,11 @@ const studentSchema = new mongoose.Schema({
         email: {
              type: String,
               required: true,
-               unique: true }
+               unique: true },
+        course:{
+            type: mongoose.Schema.ObjectId,
+            ref:"Course"
+        }
     },{
     timestamps: true
 }
