@@ -5,13 +5,14 @@ const dbConnect = require("./config/db");
 const logger = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandling");
 const studentRoutes = require("./routes/studentRoutes");
-
+const courseRoutes = require("./routes/courseRoutes");
 //middleware
 app.use(express.json());
 app.use(logger);
 
 //routes
 app.use("/",studentRoutes);
+app.use("/",courseRoutes);
 
 //connect to database
 dbConnect.connectDB();

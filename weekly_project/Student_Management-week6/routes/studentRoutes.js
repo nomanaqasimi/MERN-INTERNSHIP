@@ -5,9 +5,12 @@ const studentController = require("../controller/studentController");
 router.get("/", studentController.parentRoute);
 router.get("/students", studentController.getAllStudents);
 router.get("/students/:id",studentController.getById);
+
 router.post("/students", studentController.addStudent);
-router.put("/students/:id",studentController.Studentupdate)
-router.post("/students/addmany",studentController.addMany)
-router.delete("/students/deletemany",studentController.deleteMany)
-router.delete("/students/:id",studentController.deleteById)
+router.put("/students/updatemanyCourse",studentController.updateMany);
+
+router.put("/students/:id",studentController.Studentupdate);
+router.post("/students/addmany",studentController.addMany);
+router.delete("/students/deletemany",studentController.deleteMany);
+router.delete("/students/:id",studentController.deleteById);
 module.exports = router;

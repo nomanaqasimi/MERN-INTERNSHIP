@@ -97,3 +97,26 @@ exports.deleteMany = async (req, res, next) => {
         next(error);
     }
 }
+exports.updateMany=async (req,res,next) => {
+    try{
+        const updatedData = req.body;
+        if(!Array.isArray(updatedData)||updatedData.length===0){
+            return res.status(400).json("please provide array of updates");
+        }
+
+       const bulkOperations = updatedData.map((student)=>{
+            return {updateOne:{
+                    filter:{_id : student.id},
+                    update:{ $set : { course:student.course}}
+            }
+        }
+        })
+        console.log(JSON.stringify(bulkOperations, null, 2));
+        const updatedValues = await Students.bulkWrite(bulkOperations);
+        res.status(200).json({"message":"update successfully",
+        "modified documents":updatedValues.modifiedCount
+        });
+    }catch(err){
+        next(err);
+    }
+}
