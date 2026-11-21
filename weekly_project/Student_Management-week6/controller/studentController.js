@@ -12,7 +12,17 @@ exports.getAllStudents = async (req, res, next) => {
         const limit = parseInt(req.query.limit) || 10;
         const skip = (page - 1) * limit;
 
-        const students = await Students.find().limit(limit).skip(skip);
+        const { search } = req.query;
+
+let query = {};
+
+if (search) {
+query.name = { $regex: search, $options: "i" }; // case-insensitive
+}
+
+const students = await Students.find(query)
+.sort(sort).skip(skip).limit(limit);
+        
         res.status(200).json(students);
     }
     catch (error) {
@@ -120,3 +130,22 @@ exports.updateMany=async (req,res,next) => {
         next(err);
     }
 }
+exports.getstudentbyCourse = async (req, res, next) => {
+    try {
+        const course = req.params.course;
+
+        if (!course) {
+            return res.status(400).json("course is required");
+        }
+
+        const students = await Students.find({ course: course }).populate("course", "name");
+
+        if (students.length === 0) {
+            return res.status(404).json("no students found for this course");
+        }
+
+        res.status(200).json(students);
+    } catch (err) {
+        next(err);
+    }
+};
