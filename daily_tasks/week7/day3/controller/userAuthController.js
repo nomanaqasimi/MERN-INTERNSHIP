@@ -53,7 +53,7 @@ exports.getAllUsers =async (req,res,next)=>
 }
     exports.loginUser=async (req,res,next) =>{
     try{
-        const {email,password,role}=req.body;
+        const {email,password}=req.body;
 
         
         const user = await users.findOne({email});
