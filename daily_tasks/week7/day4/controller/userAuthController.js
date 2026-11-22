@@ -100,3 +100,17 @@ exports.updateUserByAdmin = async (req, res, next) => {
     next(err);
   }
 };
+exports.getAllUsersByAdmin = async (req, res, next) => {
+  try {
+    const allUsers = await users.find().select("-password");
+
+    res.status(200).json({
+      message: "All users fetched successfully",
+      admin: req.user.name,
+      totalUsers: allUsers.length,
+      users: allUsers,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
