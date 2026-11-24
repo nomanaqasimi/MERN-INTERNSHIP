@@ -137,3 +137,9 @@ Authorization: Bearer <your-token>
     "users": [ ... ]
   }
   ```
+  #  ✔ Task 3 — Test in Postman
+  <img width="824" height="386" alt="image" src="https://github.com/user-attachments/assets/9d441847-b951-4d3b-a53d-ee6654ba7398" />
+
+  <img width="1306" height="647" alt="image" src="https://github.com/user-attachments/assets/78b1923b-b7cf-49a4-930b-df654399025e" />
+
+
