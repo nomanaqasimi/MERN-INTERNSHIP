@@ -1,37 +1,48 @@
+
 import { useState } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Login = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const { login } = useAuth();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+
   const successMessage = location.state?.message;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setError("");
+    setSuccess("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setSuccess("");
     setLoading(true);
 
-    const result = await login(formData);
-    setLoading(false);
+    try {
+      const result = await login(formData);
 
-    if (result.success) {
-      navigate("/profile");
-    } else {
-      setError(result.error);
+      if (result.success) {
+        alert("Login successfully");
+        setSuccess("Login successfully");
+      } else {
+        setError(result.error);
+      }
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -42,6 +53,7 @@ const Login = () => {
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Sign in to your account
           </h2>
+
           <p className="mt-2 text-center text-sm text-gray-600">
             Don't have an account?{" "}
             <Link
@@ -59,6 +71,13 @@ const Login = () => {
               {successMessage}
             </div>
           )}
+
+          {success && (
+            <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
+              {success}
+            </div>
+          )}
+
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
               {error}
@@ -73,6 +92,7 @@ const Login = () => {
               >
                 Email address
               </label>
+
               <input
                 id="email"
                 name="email"
@@ -92,6 +112,7 @@ const Login = () => {
               >
                 Password
               </label>
+
               <input
                 id="password"
                 name="password"

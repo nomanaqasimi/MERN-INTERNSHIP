@@ -30,8 +30,14 @@ api.interceptors.response.use(
   async (error) => {
     const originalRequest = error.config;
 
-    // If token expired and we haven't retried yet
-    if (error.response?.status === 401 && !originalRequest._retry) {
+    // Do not attempt token refresh for auth endpoints (login, register, refresh-token)
+    const isAuthEndpoint =
+      originalRequest?.url?.includes("/login") ||
+      originalRequest?.url?.includes("/register") ||
+      originalRequest?.url?.includes("/refresh-token");
+
+    // If token expired and we haven't retried yet and not an auth endpoint
+    if (error.response?.status === 401 && !originalRequest._retry && !isAuthEndpoint) {
       originalRequest._retry = true;
 
       try {
@@ -57,7 +63,9 @@ api.interceptors.response.use(
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
         localStorage.removeItem("user");
-        window.location.href = "/login";
+        if (window.location.pathname !== "/login") {
+          window.location.href = "/login";
+        }
         return Promise.reject(refreshError);
       }
     }

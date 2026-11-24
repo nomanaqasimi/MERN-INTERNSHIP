@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
     },
     password: { type: String, required: true },
-    role: { type: String, enum: ["user", "admin"], default: "user" },
+    role: { type: String, enum: ["user", "admin", "intern"], default: "user" },
     // store refresh tokens (optional approach)
     refreshTokens: [
       { token: String, createdAt: { type: Date, default: Date.now } },

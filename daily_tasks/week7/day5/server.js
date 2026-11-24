@@ -14,12 +14,15 @@ const app = express();
 
 // Security Middlewares
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+origin: ["http://localhost:5173"],
+methods: ["GET", "POST", "PUT", "DELETE"],
+}));
 
 // Rate Limiting Middleware
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per 15-minute window
+  max: 15, // Limit each IP to 100 requests per 15-minute window
   message: {
     error: "Too many requests from this IP, please try again after 15 minutes",
   },
