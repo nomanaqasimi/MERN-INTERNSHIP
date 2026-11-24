@@ -80,3 +80,10 @@ Frontend runs on `http://localhost:5173`.
 - **Role-Based Access**: `GET /api/admin/users` restricted to admin role.
 - **Security Middlewares**: Helmet HTTP headers, CORS configuration, and Rate Limiting.
 - **Axios Interceptor**: Automatically attaches access token and silently refreshes expired tokens.
+
+<img width="1342" height="622" alt="image" src="https://github.com/user-attachments/assets/0bc1dc3d-b038-4912-915c-a657b33d9049" />
+
+<img width="1357" height="623" alt="image" src="https://github.com/user-attachments/assets/2d56896e-cccd-4439-9a01-372bc755e3ef" />
+<img width="1323" height="626" alt="image" src="https://github.com/user-attachments/assets/45072e18-e64a-404d-9572-797f491323e7" />
+
+
